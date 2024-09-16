@@ -11,7 +11,6 @@ import org.hibernate.annotations.DynamicUpdate;
 import java.io.Serial;
 import java.io.Serializable;
 
-
 @Entity
 @DynamicUpdate
 @DynamicInsert
