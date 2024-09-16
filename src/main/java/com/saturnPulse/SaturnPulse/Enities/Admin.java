@@ -3,10 +3,12 @@ package com.saturnPulse.SaturnPulse.Enities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Table;
 import lombok.Data;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
+import org.springframework.data.annotation.Id;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -16,13 +18,14 @@ import java.io.Serializable;
 @DynamicInsert
 @Data
 @Table(name = "titan_admin")
-public class Admin  implements Serializable {
+public class Admin implements Serializable {
 
     @Serial
-    private  static final long serialVersionUID=1L;
+    private static final long serialVersionUID = 1L;
 
 
-    @Column(name = "admin_id")
+
+
     private Long id;
 
     @Column(name = "admin_name")
@@ -32,7 +35,7 @@ public class Admin  implements Serializable {
     private String adminId;
 
     @Column(name = "admin_email")
-    private  String email;
+    private String email;
 
     @Column(name = "admin_password")
     private String password;
