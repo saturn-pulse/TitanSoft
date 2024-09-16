@@ -1,13 +1,10 @@
 package com.saturnPulse.SaturnPulse.Enities;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -18,20 +15,22 @@ import java.io.Serializable;
 @Entity
 @DynamicUpdate
 @DynamicInsert
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 @Table(name = "titan_admin")
-public class Admin implements Serializable {
+public class Admin
+        implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;
 
 
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "id", insertable = false,updatable = false)
-    private Long id;
+    @Column(name = "admin_id")
+    private Integer admin_id;
 
     @Column(name = "admin_name")
     private String name;
