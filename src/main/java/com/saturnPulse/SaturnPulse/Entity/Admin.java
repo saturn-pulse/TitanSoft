@@ -1,8 +1,9 @@
-package com.saturnPulse.SaturnPulse.Enities;
+package com.saturnPulse.SaturnPulse.Entity;
 
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.DynamicInsert;
@@ -18,13 +19,11 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Data
 @Table(name = "titan_admin")
-public class Admin
-        implements Serializable {
+@Builder
+public class Admin implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;
-
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
