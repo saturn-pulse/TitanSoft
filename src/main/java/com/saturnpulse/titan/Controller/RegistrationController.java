@@ -19,14 +19,14 @@ public class RegistrationController {
     @Autowired
     private AdminRepository adminRepository;
 
-//    @Autowired
-//    private PasswordEncoder passwordEncoder;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
 
 
     @PostMapping(value = "/req/signup", consumes = "application/json")
     public Admin createUser(@RequestBody Admin admin) {
-//        admin.setPassword(passwordEncoder.encode(admin.getPassword()));
+        admin.setPassword(passwordEncoder.encode(admin.getPassword()));
         return adminRepository.save(admin);
     }
 
