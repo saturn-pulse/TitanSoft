@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,7 +53,11 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to My Home Page</h1>
+        <h2 style="color: white;">Welcome  Back
+            <span th:text="${userId}" style="color: black;"></span>
+        </h2>
+
+
     </header>
     <nav>
         <a href="#home">Home</a>
@@ -62,7 +66,6 @@
         <a href="#contact">Contact</a>
     </nav>
     <main>
-        <h2>About Me</h2>
         <p>This is a paragraph about me. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque nisl ut sapien interdum, nec ullamcorper velit dapibus. Sed ac vestibulum libero, nec tempor felis.</p>
         <h2>Services</h2>
         <p>These are the services I offer. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque nisl ut sapien interdum, nec ullamcorper velit dapibus. Sed ac vestibulum libero, nec tempor felis.</p>
